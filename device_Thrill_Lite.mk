@@ -7,9 +7,11 @@ $(call inherit-product-if-exists, vendor/CloudFone/Thrill_Lite/Thrill_Lite-vendo
 
 DEVICE_PACKAGE_OVERLAYS += device/CloudFone/Thrill_Lite/overlay
 
+LOCAL_PATH := device/CloudFone/Thrill_Lite
+
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/CloudFone/Thrill_Lite/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
